@@ -1,0 +1,302 @@
+.TH "main.cpp" 3 "Tue Oct 24 2023" "Assignment-2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/gl\&.h>\fP
+.br
+\fC#include <GL/glut\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGL_SILENCE_DEPRECATION\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawCube1\fP (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX=0, GLfloat ambY=0, GLfloat ambZ=0, GLfloat shine=50)"
+.br
+.RI "Draw a cube with materials\&. "
+.ti -1c
+.RI "void \fBdrawSphere\fP (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX, GLfloat ambY, GLfloat ambZ, GLfloat shine=90)"
+.br
+.RI "Draw a sphere with materials\&. "
+.ti -1c
+.RI "void \fBcupboard\fP ()"
+.br
+.RI "Draw a cupboard\&. "
+.ti -1c
+.RI "void \fBroom\fP ()"
+.br
+.RI "Draw the room with walls, ceiling, and floor\&. "
+.ti -1c
+.RI "void \fBsingleBed\fP ()"
+.br
+.RI "Draw a single bed\&. "
+.ti -1c
+.RI "void \fBtable\fP ()"
+.br
+.RI "Draw a table\&. "
+.ti -1c
+.RI "void \fBchair\fP ()"
+.br
+.RI "Draw a chair\&. "
+.ti -1c
+.RI "void \fBwindow\fP ()"
+.br
+.RI "Draw a window\&. "
+.ti -1c
+.RI "void \fBlightBulb1\fP ()"
+.br
+.ti -1c
+.RI "void \fBlightOne\fP ()"
+.br
+.RI "Function to set up and enable the first light source\&. "
+.ti -1c
+.RI "void \fBdisplay\fP (void)"
+.br
+.RI "Function to display the scene\&. "
+.ti -1c
+.RI "void \fBmyKeyboardFunc\fP (unsigned char key, int x, int \fBy\fP)"
+.br
+.RI "Function to handle keyboard input\&. "
+.ti -1c
+.RI "void \fBanimate\fP ()"
+.br
+.RI "Function to animate objects in the scene\&. "
+.ti -1c
+.RI "void \fBfullScreen\fP (int w, int h)"
+.br
+.RI "Function to set up the full-screen perspective projection\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "GLboolean \fBredFlag\fP = true"
+.br
+.RI "Global variables\&. "
+.ti -1c
+.RI "GLboolean \fBswitchOne\fP = false"
+.br
+.ti -1c
+.RI "GLboolean \fBswitchTwo\fP = false"
+.br
+.ti -1c
+.RI "GLboolean \fBswitchLamp\fP = false"
+.br
+.ti -1c
+.RI "GLboolean \fBamb1\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBdiff1\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBspec1\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBamb2\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBdiff2\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBspec2\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBamb3\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBdiff3\fP = true"
+.br
+.ti -1c
+.RI "GLboolean \fBspec3\fP = true"
+.br
+.ti -1c
+.RI "double \fBwindowHeight\fP = 800"
+.br
+.ti -1c
+.RI "double \fBwindowWidth\fP = 600"
+.br
+.ti -1c
+.RI "double \fBeyeX\fP = 4\&.0"
+.br
+.ti -1c
+.RI "double \fBeyeY\fP = 2\&.0"
+.br
+.ti -1c
+.RI "double \fBeyeZ\fP = 15\&.0"
+.br
+.ti -1c
+.RI "double \fBrefX\fP = 0"
+.br
+.ti -1c
+.RI "double \fBrefY\fP = 0"
+.br
+.ti -1c
+.RI "double \fBrefZ\fP = 0"
+.br
+.ti -1c
+.RI "double \fBtheta\fP = 180\&.0"
+.br
+.ti -1c
+.RI "double \fBy\fP = 1\&.36"
+.br
+.ti -1c
+.RI "double \fBz\fP = 7\&.97888"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GL_SILENCE_DEPRECATION"
+
+.SH "Function Documentation"
+.PP 
+.SS "void animate ()"
+
+.PP
+Function to animate objects in the scene\&. 
+.SS "void chair ()"
+
+.PP
+Draw a chair\&. 
+.SS "void cupboard ()"
+
+.PP
+Draw a cupboard\&. 
+.SS "void display (void)"
+
+.PP
+Function to display the scene\&. 
+.SS "void drawCube1 (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX = \fC0\fP, GLfloat ambY = \fC0\fP, GLfloat ambZ = \fC0\fP, GLfloat shine = \fC50\fP)"
+
+.PP
+Draw a cube with materials\&. 
+.SS "void drawSphere (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX, GLfloat ambY, GLfloat ambZ, GLfloat shine = \fC90\fP)"
+
+.PP
+Draw a sphere with materials\&. 
+.SS "void fullScreen (int w, int h)"
+
+.PP
+Function to set up the full-screen perspective projection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIw\fP Width of the window\&. 
+.br
+\fIh\fP Height of the window\&. 
+.RE
+.PP
+
+.SS "void lightBulb1 ()"
+
+.SS "void lightOne ()"
+
+.PP
+Function to set up and enable the first light source\&. 
+.SS "int main (int argc, char ** argv)"
+
+.SS "void myKeyboardFunc (unsigned char key, int x, int y)"
+
+.PP
+Function to handle keyboard input\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP The pressed key\&. 
+.br
+\fIx\fP The x-coordinate of the mouse pointer\&. 
+.br
+\fIy\fP The y-coordinate of the mouse pointer\&. 
+.RE
+.PP
+
+.SS "void room ()"
+
+.PP
+Draw the room with walls, ceiling, and floor\&. 
+.SS "void singleBed ()"
+
+.PP
+Draw a single bed\&. 
+.SS "void table ()"
+
+.PP
+Draw a table\&. 
+.SS "void window ()"
+
+.PP
+Draw a window\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "GLboolean amb1 = true"
+
+.SS "GLboolean amb2 = true"
+
+.SS "GLboolean amb3 = true"
+
+.SS "GLboolean diff1 = true"
+
+.SS "GLboolean diff2 = true"
+
+.SS "GLboolean diff3 = true"
+
+.SS "double eyeX = 4\&.0"
+
+.SS "double eyeY = 2\&.0"
+
+.SS "double eyeZ = 15\&.0"
+
+.SS "GLboolean redFlag = true"
+
+.PP
+Global variables\&. 
+.SS "double refX = 0"
+
+.SS "double refY = 0"
+
+.SS "double refZ = 0"
+
+.SS "GLboolean spec1 = true"
+
+.SS "GLboolean spec2 = true"
+
+.SS "GLboolean spec3 = true"
+
+.SS "GLboolean switchLamp = false"
+
+.SS "GLboolean switchOne = false"
+
+.SS "GLboolean switchTwo = false"
+
+.SS "double theta = 180\&.0"
+
+.SS "double windowHeight = 800"
+
+.SS "double windowWidth = 600"
+
+.SS "double y = 1\&.36"
+
+.SS "double z = 7\&.97888"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Assignment-2 from the source code\&.

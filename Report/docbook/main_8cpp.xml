@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>main.cpp File Reference</title>
+<indexterm><primary>main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;GL/gl.h&gt;<?linebreak?>#include &lt;GL/glut.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_main_8cpp_1a1ce7c516538704e5b04a99450edc572f">GL_SILENCE_DEPRECATION</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_main_8cpp_1a420024328c988e35b301320283b701f5">drawCube1</link> (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX=0, GLfloat ambY=0, GLfloat ambZ=0, GLfloat shine=50)</para>
+
+<para>Draw a cube with materials. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a24d6b26dc52d260fec9d1daa452b04cc">drawSphere</link> (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX, GLfloat ambY, GLfloat ambZ, GLfloat shine=90)</para>
+
+<para>Draw a sphere with materials. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a1edd3f8dcd1d621176403c42db6cf587">cupboard</link> ()</para>
+
+<para>Draw a cupboard. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a971bf8e442084d37410b85fdb3276f89">room</link> ()</para>
+
+<para>Draw the room with walls, ceiling, and floor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a623786d6301c21602a908d8ef6c9b631">singleBed</link> ()</para>
+
+<para>Draw a single bed. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1afe748eedd68808635b5c0ad9ac302ab4">table</link> ()</para>
+
+<para>Draw a table. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a39e2e1acee011f522af1cf6f03f823d9">chair</link> ()</para>
+
+<para>Draw a chair. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a0df472261d6be0025cff9bfa90d649ca">window</link> ()</para>
+
+<para>Draw a window. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1acb1dd8088a7d2f3c863cf8ea74a72262">lightBulb1</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a76a9d4c4f26d97d07f7af72e4d0382a0">lightOne</link> ()</para>
+
+<para>Function to set up and enable the first light source. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a4ea013001a5fb47853d0fab8f8de35cd">display</link> (void)</para>
+
+<para>Function to display the scene. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a377e97dbdf343d40a615f233f3b173ba">myKeyboardFunc</link> (unsigned char key, int x, int <link linkend="_main_8cpp_1ab927965981178aa1fba979a37168db2a">y</link>)</para>
+
+<para>Function to handle keyboard input. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1a3e73164d603e05e94b8eedeb557a3245">animate</link> ()</para>
+
+<para>Function to animate objects in the scene. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8cpp_1aa0e90add76a959c1a9bfb13bd7286b35">fullScreen</link> (int w, int h)</para>
+
+<para>Function to set up the full-screen perspective projection. </para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (int argc, char **argv)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1afa723ee14244c1d431a47cc348083abb">redFlag</link> = true</para>
+
+<para>Global variables. </para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a4f61c56c3300e24117e3536e9920408b">switchOne</link> = false</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1abc07d99e57f419561cfdb6934eb20f74">switchTwo</link> = false</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a00041b90d90c0c4d852bf265859159a6">switchLamp</link> = false</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1ad5e4e6cad31b5468ea93f2ab09325ee4">amb1</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a52047025ed1272566a16f07756c34cc0">diff1</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1ac722df34e32c5cc30701f6087a5706bb">spec1</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a5017f84e3cd5f4f309896bf115ee816b">amb2</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a7e9669e466ae43f07ec1e5182bc7b702">diff2</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a66c3d043b7139762545cc46bacae6341">spec2</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a2d3b6918c17e91a5cac71e11eea4110c">amb3</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a2fc3d171effc1fed6ed8215b7973a581">diff3</link> = true</para>
+</listitem>
+            <listitem><para>GLboolean <link linkend="_main_8cpp_1a77e4d00dcc45f8cab6719a0608197745">spec3</link> = true</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a4ecfe0d8bf6a487068073a194c7a94b3">windowHeight</link> = 800</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a768ff56ab4d7137cbdd37ffd28de3498">windowWidth</link> = 600</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a9ffbb9c73fce0ac089a5aad3db53207e">eyeX</link> = 4.0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a0c83bfcf8d1db26c4eba06051227ac76">eyeY</link> = 2.0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a9d3cdcd8ca88ac7cc4d1b43ee49c947b">eyeZ</link> = 15.0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a43baec2442edb0faacf02b6e272b1dbd">refX</link> = 0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a6e3aa59d1fbd30eac76fcad0b2bce5d5">refY</link> = 0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1a817b03d04cd481582de921525ae4f6a9">refZ</link> = 0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1aca81c35c21e3a5f7f3a8d24504e76664">theta</link> = 180.0</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1ab927965981178aa1fba979a37168db2a">y</link> = 1.36</para>
+</listitem>
+            <listitem><para>double <link linkend="_main_8cpp_1ab3e6ed577a7c669c19de1f9c1b46c872">z</link> = 7.97888</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_main_8cpp_1a1ce7c516538704e5b04a99450edc572f"/><section>
+    <title>GL_SILENCE_DEPRECATION</title>
+<indexterm><primary>GL_SILENCE_DEPRECATION</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>GL_SILENCE_DEPRECATION</secondary></indexterm>
+<para><computeroutput>#define GL_SILENCE_DEPRECATION</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1a3e73164d603e05e94b8eedeb557a3245"/><section>
+    <title>animate()</title>
+<indexterm><primary>animate</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>animate</secondary></indexterm>
+<para><computeroutput>void animate ( )</computeroutput></para><para>
+
+<para>Function to animate objects in the scene. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a39e2e1acee011f522af1cf6f03f823d9"/><section>
+    <title>chair()</title>
+<indexterm><primary>chair</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>chair</secondary></indexterm>
+<para><computeroutput>void chair ( )</computeroutput></para><para>
+
+<para>Draw a chair. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a1edd3f8dcd1d621176403c42db6cf587"/><section>
+    <title>cupboard()</title>
+<indexterm><primary>cupboard</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>cupboard</secondary></indexterm>
+<para><computeroutput>void cupboard ( )</computeroutput></para><para>
+
+<para>Draw a cupboard. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a4ea013001a5fb47853d0fab8f8de35cd"/><section>
+    <title>display()</title>
+<indexterm><primary>display</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>display</secondary></indexterm>
+<para><computeroutput>void display (void )</computeroutput></para><para>
+
+<para>Function to display the scene. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a420024328c988e35b301320283b701f5"/><section>
+    <title>drawCube1()</title>
+<indexterm><primary>drawCube1</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>drawCube1</secondary></indexterm>
+<para><computeroutput>void drawCube1 (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX = <computeroutput>0</computeroutput>
+, GLfloat ambY = <computeroutput>0</computeroutput>
+, GLfloat ambZ = <computeroutput>0</computeroutput>
+, GLfloat shine = <computeroutput>50</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draw a cube with materials. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a24d6b26dc52d260fec9d1daa452b04cc"/><section>
+    <title>drawSphere()</title>
+<indexterm><primary>drawSphere</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>drawSphere</secondary></indexterm>
+<para><computeroutput>void drawSphere (GLfloat difX, GLfloat difY, GLfloat difZ, GLfloat ambX, GLfloat ambY, GLfloat ambZ, GLfloat shine = <computeroutput>90</computeroutput>
+)</computeroutput></para><para>
+
+<para>Draw a sphere with materials. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1aa0e90add76a959c1a9bfb13bd7286b35"/><section>
+    <title>fullScreen()</title>
+<indexterm><primary>fullScreen</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>fullScreen</secondary></indexterm>
+<para><computeroutput>void fullScreen (int w, int h)</computeroutput></para><para>
+
+<para>Function to set up the full-screen perspective projection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>w</entry><entry>
+<para>Width of the window. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>h</entry><entry>
+<para>Height of the window. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_main_8cpp_1acb1dd8088a7d2f3c863cf8ea74a72262"/><section>
+    <title>lightBulb1()</title>
+<indexterm><primary>lightBulb1</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>lightBulb1</secondary></indexterm>
+<para><computeroutput>void lightBulb1 ( )</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a76a9d4c4f26d97d07f7af72e4d0382a0"/><section>
+    <title>lightOne()</title>
+<indexterm><primary>lightOne</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>lightOne</secondary></indexterm>
+<para><computeroutput>void lightOne ( )</computeroutput></para><para>
+
+<para>Function to set up and enable the first light source. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char ** argv)</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a377e97dbdf343d40a615f233f3b173ba"/><section>
+    <title>myKeyboardFunc()</title>
+<indexterm><primary>myKeyboardFunc</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>myKeyboardFunc</secondary></indexterm>
+<para><computeroutput>void myKeyboardFunc (unsigned char key, int x, int y)</computeroutput></para><para>
+
+<para>Function to handle keyboard input. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The pressed key. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>x</entry><entry>
+<para>The x-coordinate of the mouse pointer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y</entry><entry>
+<para>The y-coordinate of the mouse pointer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_main_8cpp_1a971bf8e442084d37410b85fdb3276f89"/><section>
+    <title>room()</title>
+<indexterm><primary>room</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>room</secondary></indexterm>
+<para><computeroutput>void room ( )</computeroutput></para><para>
+
+<para>Draw the room with walls, ceiling, and floor. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a623786d6301c21602a908d8ef6c9b631"/><section>
+    <title>singleBed()</title>
+<indexterm><primary>singleBed</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>singleBed</secondary></indexterm>
+<para><computeroutput>void singleBed ( )</computeroutput></para><para>
+
+<para>Draw a single bed. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1afe748eedd68808635b5c0ad9ac302ab4"/><section>
+    <title>table()</title>
+<indexterm><primary>table</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>table</secondary></indexterm>
+<para><computeroutput>void table ( )</computeroutput></para><para>
+
+<para>Draw a table. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a0df472261d6be0025cff9bfa90d649ca"/><section>
+    <title>window()</title>
+<indexterm><primary>window</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>window</secondary></indexterm>
+<para><computeroutput>void window ( )</computeroutput></para><para>
+
+<para>Draw a window. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_main_8cpp_1ad5e4e6cad31b5468ea93f2ab09325ee4"/><section>
+    <title>amb1</title>
+<indexterm><primary>amb1</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>amb1</secondary></indexterm>
+<para><computeroutput>GLboolean amb1 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a5017f84e3cd5f4f309896bf115ee816b"/><section>
+    <title>amb2</title>
+<indexterm><primary>amb2</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>amb2</secondary></indexterm>
+<para><computeroutput>GLboolean amb2 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a2d3b6918c17e91a5cac71e11eea4110c"/><section>
+    <title>amb3</title>
+<indexterm><primary>amb3</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>amb3</secondary></indexterm>
+<para><computeroutput>GLboolean amb3 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a52047025ed1272566a16f07756c34cc0"/><section>
+    <title>diff1</title>
+<indexterm><primary>diff1</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>diff1</secondary></indexterm>
+<para><computeroutput>GLboolean diff1 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a7e9669e466ae43f07ec1e5182bc7b702"/><section>
+    <title>diff2</title>
+<indexterm><primary>diff2</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>diff2</secondary></indexterm>
+<para><computeroutput>GLboolean diff2 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a2fc3d171effc1fed6ed8215b7973a581"/><section>
+    <title>diff3</title>
+<indexterm><primary>diff3</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>diff3</secondary></indexterm>
+<para><computeroutput>GLboolean diff3 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a9ffbb9c73fce0ac089a5aad3db53207e"/><section>
+    <title>eyeX</title>
+<indexterm><primary>eyeX</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>eyeX</secondary></indexterm>
+<para><computeroutput>double eyeX = 4.0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a0c83bfcf8d1db26c4eba06051227ac76"/><section>
+    <title>eyeY</title>
+<indexterm><primary>eyeY</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>eyeY</secondary></indexterm>
+<para><computeroutput>double eyeY = 2.0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a9d3cdcd8ca88ac7cc4d1b43ee49c947b"/><section>
+    <title>eyeZ</title>
+<indexterm><primary>eyeZ</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>eyeZ</secondary></indexterm>
+<para><computeroutput>double eyeZ = 15.0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1afa723ee14244c1d431a47cc348083abb"/><section>
+    <title>redFlag</title>
+<indexterm><primary>redFlag</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>redFlag</secondary></indexterm>
+<para><computeroutput>GLboolean redFlag = true</computeroutput></para><para>
+
+<para>Global variables. </para>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1a43baec2442edb0faacf02b6e272b1dbd"/><section>
+    <title>refX</title>
+<indexterm><primary>refX</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>refX</secondary></indexterm>
+<para><computeroutput>double refX = 0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a6e3aa59d1fbd30eac76fcad0b2bce5d5"/><section>
+    <title>refY</title>
+<indexterm><primary>refY</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>refY</secondary></indexterm>
+<para><computeroutput>double refY = 0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a817b03d04cd481582de921525ae4f6a9"/><section>
+    <title>refZ</title>
+<indexterm><primary>refZ</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>refZ</secondary></indexterm>
+<para><computeroutput>double refZ = 0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1ac722df34e32c5cc30701f6087a5706bb"/><section>
+    <title>spec1</title>
+<indexterm><primary>spec1</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>spec1</secondary></indexterm>
+<para><computeroutput>GLboolean spec1 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a66c3d043b7139762545cc46bacae6341"/><section>
+    <title>spec2</title>
+<indexterm><primary>spec2</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>spec2</secondary></indexterm>
+<para><computeroutput>GLboolean spec2 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a77e4d00dcc45f8cab6719a0608197745"/><section>
+    <title>spec3</title>
+<indexterm><primary>spec3</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>spec3</secondary></indexterm>
+<para><computeroutput>GLboolean spec3 = true</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a00041b90d90c0c4d852bf265859159a6"/><section>
+    <title>switchLamp</title>
+<indexterm><primary>switchLamp</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>switchLamp</secondary></indexterm>
+<para><computeroutput>GLboolean switchLamp = false</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a4f61c56c3300e24117e3536e9920408b"/><section>
+    <title>switchOne</title>
+<indexterm><primary>switchOne</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>switchOne</secondary></indexterm>
+<para><computeroutput>GLboolean switchOne = false</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1abc07d99e57f419561cfdb6934eb20f74"/><section>
+    <title>switchTwo</title>
+<indexterm><primary>switchTwo</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>switchTwo</secondary></indexterm>
+<para><computeroutput>GLboolean switchTwo = false</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1aca81c35c21e3a5f7f3a8d24504e76664"/><section>
+    <title>theta</title>
+<indexterm><primary>theta</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>theta</secondary></indexterm>
+<para><computeroutput>double theta = 180.0</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a4ecfe0d8bf6a487068073a194c7a94b3"/><section>
+    <title>windowHeight</title>
+<indexterm><primary>windowHeight</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>windowHeight</secondary></indexterm>
+<para><computeroutput>double windowHeight = 800</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1a768ff56ab4d7137cbdd37ffd28de3498"/><section>
+    <title>windowWidth</title>
+<indexterm><primary>windowWidth</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>windowWidth</secondary></indexterm>
+<para><computeroutput>double windowWidth = 600</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1ab927965981178aa1fba979a37168db2a"/><section>
+    <title>y</title>
+<indexterm><primary>y</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>y</secondary></indexterm>
+<para><computeroutput>double y = 1.36</computeroutput></para></section>
+<anchor xml:id="_main_8cpp_1ab3e6ed577a7c669c19de1f9c1b46c872"/><section>
+    <title>z</title>
+<indexterm><primary>z</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>z</secondary></indexterm>
+<para><computeroutput>double z = 7.97888</computeroutput></para></section>
+</section>
+</section>

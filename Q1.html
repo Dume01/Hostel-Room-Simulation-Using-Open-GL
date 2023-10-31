@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+
+    <title>Assignment 2</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap jss -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- My css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome css -->
+    <script src="https://kit.fontawesome.com/d47dbe36d2.js" crossorigin="anonymous"></script>
+    <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+    <link rel="stylesheet" href="/styles1.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-top.css" rel="stylesheet">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Computer Graphics Assignment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" href="Report/html/index.html">Documentation</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>High-Level Overview of Hostel Bedroom Scene in OpenGL</h1>
+<ol>
+    <li>
+        <b>Include Necessary Headers:</b>
+        <p>Include the required OpenGL and GLUT headers for graphics rendering and window management.</p>
+    </li>
+    <li>
+        <b>Global Variables:</b>
+        <p>Declare global variables to hold various settings and properties for the scene, including camera position, lighting properties, object properties, and window dimensions.</p>
+    </li>
+    <li>
+        <b>Define Cube Vertices:</b>
+        <p>Define the vertices of a cube, which will be used to create various objects in the scene.</p>
+    </li>
+    <li>
+        <b>Utility Function to Calculate Normals:</b>
+        <p>Implement a function to calculate and set normals for triangles.</p>
+    </li>
+    <li>
+        <b>Draw Functions for Objects:</b>
+        <p>Implement functions to draw various objects like cubes and spheres with materials (specifying their colors).</p>
+    </li>
+    <li>
+        <b>Functions to Draw Furniture and Room:</b>
+        <p>Implement functions to draw different pieces of furniture and the room itself. These functions use the draw functions to render objects.</p>
+    </li>
+    <li>
+        <b>Display Function:</b>
+        <p>Define the main display function to render the scene. This function sets up the projection and modelview matrices, enables lighting, and draws the room and furniture.</p>
+    </li>
+    <li>
+        <b>Keyboard Callback Function:</b>
+        <p>Implement a keyboard callback function to handle user input for controlling the camera position, zoom, and light settings.</p>
+    </li>
+    <li>
+        <b>Animation Function:</b>
+        <p>Create an animation function to animate objects in the scene. In this code, it's used to simulate a flickering light bulb.</p>
+    </li>
+    <li>
+        <b>Full-Screen Function:</b>
+        <p>Implement a function to set up a full-screen perspective projection.</p>
+    </li>
+    <li>
+        <b>Main Function:</b>
+        <p>In the main function, initialize GLUT, set up the window, configure various OpenGL settings, and enter the main loop for event handling and rendering.</p>
+    </li>
+    <li>
+        <b>Usage Instructions:</b>
+        <p>Provide usage instructions to the user for controlling the camera and scene through keyboard input.</p>
+    </li>
+    <li>
+        <b>Execute the Main Loop:</b>
+        <p>Finally, execute the main loop using glutMainLoop() to start the application.</p>
+    </li>
+</ol>
+<h2>Command to Run the code:</h2>
+1.) g++ main.cpp -o main -lglut -lGL -lGLU
+<br>
+2.) ./main
+<br>
+<br>
+<h2>Terminal</h2>
+<img src="img\2.jpg" alt="">
+<br>
+<br>
+<h2>Sample Output</h2>
+<img src="img\1.jpg" alt="">
+
+</main>
+
+    <script src="//onlinegdb.com/embed/js/Ewuk48Kwd?theme=dark"></script>
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
